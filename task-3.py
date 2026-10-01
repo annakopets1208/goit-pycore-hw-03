@@ -1,6 +1,7 @@
 import re
 
 def normalize_phone(phone_number:str) -> str:
+
     """
      Нормалізує телефонний номер до формату +380XXXXXXXXX.
 
@@ -11,7 +12,7 @@ def normalize_phone(phone_number:str) -> str:
     removed_symbols = re.sub(r"\D", "", phone_number)
     if removed_symbols.startswith("380"):
         return f"+{removed_symbols}"
-    return f"+380{removed_symbols}"
+    return f"+38{removed_symbols}"
 
 
 raw_numbers = [
